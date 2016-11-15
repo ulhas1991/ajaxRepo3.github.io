@@ -48,7 +48,7 @@ function dataHandler(){
     var root=responseData.documentElement;
     var totalname=root.getElementsByTagName("name");
     var totalssn=root.getElementsByTagName("ssn");
-    var data1;
+    var data1="";
 
     for(var i=0;i<totalname.length;i++){
         data1+="name= "+ totalname.item(i).firstChild.data+ "ssn="+ totalssn.item(i).firstChild.data +"<br/>";
