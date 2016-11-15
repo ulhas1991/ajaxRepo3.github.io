@@ -1,0 +1,31 @@
+<?xml version="1.0" content-type="UTF-8" standalone="yes"?>
+<response>
+    <persons>
+        <person>
+            <name>  
+                Ulhas Shelke
+            </name>
+            <ssn>   
+                717287287
+            </ssn>
+        </person>
+        
+        <person>
+            <name>  
+                Shahanwaj Patel
+            </name>
+            <ssn>   
+                3849439889
+            </ssn>
+        </person>
+
+        <person>
+            <name>  
+                Sagar KKJAJ
+            </name>
+            <ssn>   
+                898989
+            </ssn>
+        </person>
+    </persons>
+</response>
