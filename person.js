@@ -50,7 +50,7 @@ function dataHandler(){
     var totalssn=root.getElementsByTagName("ssn");
     var data1;
 
-    for(var i=0;i<name.length;i++){
+    for(var i=0;i<totalname.length;i++){
         data1+="name= "+ totalname.item(i).firstChild.data+ " ssn="+ totalssn.item(i).firstChild.data;
     }
     var displayData=document.getElementById("displayData");
