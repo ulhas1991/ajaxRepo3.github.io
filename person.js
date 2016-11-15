@@ -6,7 +6,7 @@ function CreateNewXmlObject(){
         xmlHttp=new XMLHttpRequest();
     }
     else{
-        xmlHttp=new ActiveXObject();
+        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
     }
 
     return xmlHttp;
@@ -31,20 +31,23 @@ function process(){
 function handleServerResponse(){
     if(xmlHttp.readyState==4){
         if(xmlHttp.status==200){
-            dataHandler();
+            try {
+                 dataHandler();
+            } catch (error) {
+                alert(error.toString());
+            }  
         }
         else{
-            alert("Someting wrong in handleServerResponse");
+            alert(xmlHttp.statusText);
         }
-    }else{
-        alert(xmlHttp.statusText);
     }
 }
 
 function dataHandler(){
-    var responseData=xmlHttp.response;
-    var totalname=responseData.getElementsByTagName("name");
-    var totalssn=responseData.getElementsByTagName("ssn");
+    var responseData=xmlHttp.responseXML;
+    var root=responseData.documentElement;
+    var totalname=root.getElementsByTagName("name");
+    var totalssn=root.getElementsByTagName("ssn");
     var data1;
 
     for(var i=0;i<name.length;i++){
