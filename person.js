@@ -51,7 +51,7 @@ function dataHandler(){
     var data1;
 
     for(var i=0;i<name.length;i++){
-        data1+="name= "+ totalname.item(i).firstChild+ " ssn="+ totalssn.item(i).firstChild;
+        data1+="name= "+ totalname.item(i).firstChild.data+ " ssn="+ totalssn.item(i).firstChild.data;
     }
     var displayData=document.getElementById("displayData");
     displayData.innerHTML=data1;
